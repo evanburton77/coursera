@@ -1,4 +1,4 @@
-let userRole = "none"
+let userRole = "Enrolled Member"
 let accessLevel
 if (userRole === "Employee"){
 accessLevel = "You have access to Dietary Services";
