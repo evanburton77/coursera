@@ -26,3 +26,8 @@ function increaseCount(){
     displayCount();
     checkCountValue();
 }
+
+function resetCount(){
+    count = 0;
+    displayCount();
+}
