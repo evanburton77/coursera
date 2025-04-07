@@ -65,7 +65,11 @@ xhr2.onload = function() {
 
     var articlesDiv = document.getElementById("newsArticles");
 
-  articlesDiv.innerHTML = articles;
+    var newsArticle = document.createElement("p");
+    newsArticle.textContent = articles;
+    articlesDiv.appendChild(newsArticle);
+
+  // articlesDiv.innerHTML = articles;
 }
 xhr2.send();
 
