@@ -56,20 +56,35 @@ var xhr2 = new XMLHttpRequest();
 var url2 = './news_article.json';
 
 xhr2.open('GET', url2, true);
-
 xhr2.responseType = "json";
-
 xhr2.onload = function() {
 
     var articles = xhr2.response.articles;
-
     var articlesDiv = document.getElementById("newsArticles");
 
     var newsArticle = document.createElement("p");
     newsArticle.textContent = articles;
+
     articlesDiv.appendChild(newsArticle);
 
   // articlesDiv.innerHTML = articles;
 }
 xhr2.send();
 
+var xhr3 = new XMLHttpRequest();
+var url3 = './sports_article.json';
+
+
+xhr3.open('GET', url3, true);
+xhr3.responseType = 'json';
+xhr3.onload = function() {
+    var articles = xhr3.response.articles;
+    var articlesDiv = document.getElementById("sportsArticles");
+
+    var sportsArticle = document.createElement("p");
+     sportsArticle.textContent = articles;
+
+    articlesDiv.appendChild(sportsArticle);
+}
+
+xhr3.send();
